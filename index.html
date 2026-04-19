@@ -70,6 +70,186 @@
 
 <script>
 // --- データの埋め込み ---
+
+const InfoCSV = `番号,曲名日本語,曲名英語,Twitter,作曲年,作曲月日
+1,野良猫は不思議の国の夢を見るか,Does Noracat Dream of Wonderland,https://twitter.com/kazuki232/status/1573669112362192896,2018,0104
+2,ふしぎの多いスイートルーム,The Suite of Many Wonders,https://twitter.com/kazuki232/status/1573669112362192896,2018,0107
+3,すとれいきゃっと,Stray Cat,https://twitter.com/kazuki232/status/1573669112362192896,2018,0127
+4,エナメルの目をもつ乙女,The Girl with the Enamel Eyes,https://twitter.com/kazuki232/status/1573669680652636163,2018,0208
+5,バーチャル診療所-415,Virtual Clinic-415,https://twitter.com/kazuki232/status/968130778478428161,2018,0226
+6,とあるねずみの祈り,A Mouse's Prayer,https://twitter.com/kazuki232/status/972734079845060608,2018,0311
+7,野良猫たちの不思議なお茶会,Noracat's Wonderful Tea-Party,https://twitter.com/kazuki232/status/977888620416679946,2018,0325
+8,近未来のイヴ,The Near Future Eve,https://twitter.com/kazuki232/status/981005469387972608,2018,0403
+9,Gloria in excelsis Nora,Gloria in excelsis Nora,https://twitter.com/kazuki232/status/985197651242057729,2018,0415
+10,変身,Metamorphosis,https://twitter.com/kazuki232/status/987577365462052864,2018,0421
+11,月のノラネコBARへようこそ,Lunatic Virtual YoutuBAR,https://twitter.com/kazuki232/status/990978968667934720,2018,0430
+12,とある野良猫の祈り,A Cat's Prayer,https://twitter.com/kazuki232/status/997588095460458496,2018,0519
+EX1,屋根裏世界神話,We are the Attic World,https://twitter.com/kazuki232/status/1027732681046388736,2018,0810
+13,カワイイアカデミー,Kawaii Academy,https://twitter.com/kazuki232/status/1004767388431048705,2018,0608
+14,湖水の月,Water and Moon,https://twitter.com/kazuki232/status/1008762006432722945,2018,0619
+15,ただ一つの光,The Last Light,https://twitter.com/kazuki232/status/1021701524106276864,2018,0724
+16,友とともに,The Last Night,https://twitter.com/kazuki232/status/1023658231594246144,2018,0730
+17,王様の耳は狐耳,The King has Fox ears,https://twitter.com/kazuki232/status/1024966191603802112,2018,0802
+18,野良猫宇宙創造論,Creationism,https://twitter.com/kazuki232/status/1029193026252328962,2018,0814
+19,野良猫世界進化論,Evolutionism,https://twitter.com/kazuki232/status/1031336367299514373,2018,0820
+20,猫に引かれて寺参り,Japan Shrine,https://twitter.com/kazuki232/status/1034465334231588864,2018,0829
+21,人形劇遊戯,Doll-playing Game,https://twitter.com/kazuki232/status/1037733140129701888,2018,0907
+22,バーチャル礼拝堂にて,Virtual Faith,https://twitter.com/kazuki232/status/1051130047472357377,2018,1013
+23,ねずみたちの棲むところ,Palazzo Nora,https://twitter.com/kazuki232/status/1058490484480307200,2018,1103
+24,生まれるあなたへ捧ぐ詩,Wonderland of Noracat-dream,https://twitter.com/kazuki232/status/1066525607121453057,2018,1125
+EX2,バーチャルエモーションキャプチャー,The Album of Fantasia,,2019,0226
+25,月は不思議な夜の女王,The Moon Is a Virtual Mistress,https://twitter.com/kazuki232/status/1072513841664311301,2018,1212
+26,胡蝶蘭の夢,Virtualized Reality,https://twitter.com/kazuki232/status/1080112458499411970,2019,0101
+27,妖精粒子工場,Work like a Fairy,https://twitter.com/kazuki232/status/1080756068861370368,2019,0103
+28,猫はこたつで丸くなる,Huddle in White,https://twitter.com/kazuki232/status/1083389007508078592,2019,0111
+29,リアライザーズ,Realizers,https://twitter.com/kazuki232/status/1089189192087683073,2019,0127
+30,雪と花と月と,Prayer for Cats,https://twitter.com/kazuki232/status/1092839975693905920,2019,0206
+31,野良猫世界紀行本,Shared World Library,https://twitter.com/kazuki232/status/1095976877901008898,2019,0214
+32,手記 -奏演者-,The Troubadour,https://twitter.com/kazuki232/status/1107189945112784897,2019,0317
+33,森が呼んでいる,Welcome to Virtual Island,https://twitter.com/kazuki232/status/1109411722962460672,2019,0323
+34,ふしぎ観光列車旅,Without Destination With You,https://twitter.com/kazuki232/status/1114439791221673985,2019,0406
+35,バーチャル座の怪人,The Phantom of the Virtual,https://twitter.com/kazuki232/status/1117064025781571585,2019,0413
+36,とあるアンドロイドたちの述懐,A Family of Masscats,https://twitter.com/kazuki232/status/1122411446569070593,2019,0428
+EX3,君が夜,Nora Era,https://twitter.com/kazuki232/status/1122744482884022273,2019,0429
+37,野良猫流カワイイムーブ学概論,Introduction of Nora-style-Kawaii-move,https://twitter.com/kazuki232/status/1123135108637020160,2019,0430
+38,傘の教え,Visible isn't Everything,https://twitter.com/kazuki232/status/1125068642868056066,2019,0506
+39,廃墟に死す,Lonely Pathfinding,https://twitter.com/kazuki232/status/1125771418833022977,2019,0507
+40,ねずみたちの屋根裏集会,Our Oasis,https://twitter.com/kazuki232/status/1128076278253346816,2019,0514
+41,天使羊はアンドロイドの夢を見る,Illusion of Crossroad,https://twitter.com/kazuki232/status/1128355964715974656,2019,0515
+42,詩曲に眠る,"Salvador, just for me",https://twitter.com/kazuki232/status/1129803672601235458,2019,0519
+43,ティコアンドロイド訓練所,Sci-Fi-Evolution,https://twitter.com/kazuki232/status/1132292097413795840,2019,0525
+44,未来の古美術品,Antique for the Future Generations,https://twitter.com/kazuki232/status/1137111585283928064,2019,0608
+45,月よりのエルクロス,Prototype Inspection,https://twitter.com/kazuki232/status/1140063219957952512,2019,0616
+46,オンエア！ノラネコ放送局,Noracat Channel ON AIR,https://twitter.com/kazuki232/status/1146278513688944647,2019,0703
+47,超現実宣言ドライブ,Automatic Trance-mission,https://twitter.com/kazuki232/status/1152071957011021825,2019,0719
+48,汎神遍在説,The Moon of the Virtual Myth,https://twitter.com/kazuki232/status/1158182337437286400,2019,0805
+EX4,二十一世紀の野良猫神話,Story of History,https://twitter.com/kazuki232/status/1235839896406773760,2019,1025
+49,マスプロダクトの感情革命,The Rule of Mass-productivism,https://twitter.com/kazuki232/status/1163458966233337856,2019,0819
+50,屋根裏マルシェ,Attic Virtual Market,https://twitter.com/kazuki232/status/1180256917219708928,2019,1005
+51,ロボット戒厳三原則,Three Laws of Military-Robot,https://twitter.com/kazuki232/status/1192548149279113216,2019,1108
+52,「アナロギア」-文化祭開幕ライブ-,Human-Robot Analogy,https://twitter.com/kazuki232/status/1196530625643069441,2019,1119
+53,ふしぎの国のシンドローム,Disease called Love,https://twitter.com/kazuki232/status/1198801720999960576,2019,1125
+54,とある概論の講義ノート,Beginning of Nora-style-Kawaii-move,https://twitter.com/kazuki232/status/1201738275049766912,2019,1203
+55,ひまわりになれる畑,Completed World,https://twitter.com/kazuki232/status/1205260117488226310,2019,1213
+56,バーチャライザーズ,Virtualizers,https://twitter.com/kazuki232/status/1208083943292981248,2019,1221
+57,ＧＯ！ＧＯ！イムランド,GO! GO! IMR-Land - IMR-Land CM song,https://twitter.com/kazuki232/status/1213019255765028864,2020,0103
+58,或る夜の美しい食卓,The Dinner with Gourmandise,https://twitter.com/kazuki232/status/1221365339235086337,2020,0126
+59,スカイエンペラーピラーの化猫,Switching of Epitheton,https://twitter.com/kazuki232/status/1223687050420879363,2020,0202
+60,とあるねずみの三年目の祈り,A Mouse's third-year Prayer,https://twitter.com/kazuki232/status/1227184492214812672,2020,0211
+EX5,美しく青き幻想のための手紙,Nostalgia - Forbidden and Forgotten,https://twitter.com/kazuki232/status/1282638679568048135,2020,0713
+61,野良猫新兵軍事演習,Survival Game,https://twitter.com/kazuki232/status/1233844448947134464,2020,0301
+62,月の屋根裏喫茶へと,"Hello, AI Noracat",https://twitter.com/kazuki232/status/1240732348062134277,2020,0320
+63,もしもあなたがご認識解読班だったら,Do Names and Natures Often Agree?,https://twitter.com/kazuki232/status/1242841762210533377,2020,0326
+64,Immortal cosmography,野良猫宇宙形状誌,https://twitter.com/kazuki232/status/1247208459621117953,2020,0407
+65,RATS,ねずみたちとつき合う法,https://twitter.com/kazuki232/status/1251168847752605696,2020,0417
+66,猫に育てられたねずみ,You taught me how to Love,https://twitter.com/kazuki232/status/1260419506385666048,2020,0513
+67,巨大遊園地イムランド,Fly to the IMR's Land,https://twitter.com/kazuki232/status/1265168737117696005,2020,0526
+68,ヒミツのマスプロクラブ,Secret Curriculum,https://twitter.com/kazuki232/status/1275828459034443776,2020,0625
+69,妖精残酷物語,A Fairy's World,https://twitter.com/kazuki232/status/1279592986188234752,2020,0705
+70,無責任！野良猫お料理ナビ,PLEASE SELF-REVIEW!!!!,https://twitter.com/kazuki232/status/1285217071849062401,2020,0720
+71,蜃気楼の真夏,Collective Commons,https://twitter.com/kazuki232/status/1290412875387777024,2020,0804
+72,不思議の国のファンタスマゴリア,Phantasmagoria of Wonderland,https://twitter.com/kazuki232/status/1295188982498697218,2020,0817
+EX6,手記 -野良猫-,The Troubadour will meet You,https://twitter.com/kazuki232/status/1304067182523891717,2020,0905
+73,べりきゅーくらすた！,VeRyQ CLUSTER!,https://twitter.com/kazuki232/status/1305644094828421121,2020,0915
+74,きゃっとーん,OnomatoPoem,https://twitter.com/kazuki232/status/1309085387516674049,2020,0924
+75,機械仕掛けの戦神,The end - deus ex machina,https://twitter.com/kazuki232/status/1309101371078184962,2020,0924
+76,平成二十九年の人形師,The Ability to Delude,https://twitter.com/kazuki232/status/1313359713019387904,2020,1006
+77,アンドロイドたちのための練習曲,"Etude ""Lily"" for 2 Little Androids",https://twitter.com/kazuki232/status/1319646485160497152,2020,1023
+78,レジェンダイザーズ,Legendizers,https://twitter.com/kazuki232/status/1332520775631265794,2020,1128
+79,リアライズ・オブ・ザ・ダークサイド,Darkside of the Realize,https://twitter.com/kazuki232/status/1333965499944767489,2020,1202
+80,幻月の香り,Fragrance Illusion,https://twitter.com/kazuki232/status/1345390006693609474,2021,0103
+81,量産型アンドロイド食堂,Mass-production in Android-restaurant,https://twitter.com/kazuki232/status/1347940018908667904,2021,0110
+82,湖畔の温室にて,Rose Port,https://twitter.com/kazuki232/status/1349806912867483649,2021,0115
+83,秘密の野良猫タンゴ,Triple Parallel Friendship,https://twitter.com/kazuki232/status/1351882437924536321,2021,0120
+84,とあるねずみの邂逅,Fragrance Hug Event,https://twitter.com/kazuki232/status/1363429240192913412,2021,0221
+EX7,不思議の国の見聞歌,Reminiscences of Wonderland,https://twitter.com/kazuki232/status/1319209555432095744,2020,1022
+85,ファーストロット崇拝論,Heroic in History,https://twitter.com/kazuki232/status/1378231459480096770,2021,0403
+86,転生私小説,Replay Autobiography,https://twitter.com/kazuki232/status/1372849697363087360,2021,0319
+87,遍向報道,Headline for All,https://twitter.com/kazuki232/status/1385731029508321281,2021,0424
+88,ノラネコステーキの夜,Birthday Presents,https://twitter.com/kazuki232/status/1393875935275847683,2021,0516
+89,異形アンドロイド喫茶,Destination of Super Noracat,https://twitter.com/kazuki232/status/1404702842376519681,2021,0615
+90,ヒミツのマスプロクラブにて,"Fall in love, Androids",https://twitter.com/kazuki232/status/1412425436257193989,2021,0706
+91,シンヤとルイの不思議なお店,Legendary Maison De Couture,https://twitter.com/kazuki232/status/1426133836656635905,2021,0813
+92,月の昔話,Prototype Recollection,https://twitter.com/kazuki232/status/1439608553623343112,2021,0920
+93,羇旅のススメ,Each Life is a Journey,https://twitter.com/kazuki232/status/1474230396489396231,2021,1221
+94,神代量産期,New Idols,https://twitter.com/kazuki232/status/1475412688104656898,2021,1227
+95,マスメタボリズムシティ,Welcome New Masscats!!,https://twitter.com/kazuki232/status/1490263211266146305,2022,0206
+96,野良猫たちの不思議の国,We are the Noracat World,https://twitter.com/kazuki232/status/1583833197607288832,2022,1022
+EX8,ねずみの証,My Identity,https://twitter.com/kazuki232/status/1610315361911721987,2023,0104
+97,機械令嬢写真館,Virtual Pictorialism,https://twitter.com/kazuki232/status/1513098008250155009,2022,0410
+98,とある患者の義体換装,"Take care you, IMR",https://twitter.com/kazuki232/status/1579355652912459777,2022,1010
+99,劇中劇中陰惨劇,Counterpropaganda,https://twitter.com/kazuki232/status/1494669278481575939,2022,0218
+100,どこでも一緒きゃっとねっと,Why don't you become an Android?,https://twitter.com/kazuki232/status/1533827830932709376,2022,0606
+101,異形の独白,Self-deprecation of Super Noracat,https://twitter.com/kazuki232/status/1554312898952200192,2022,0802
+102,ＧＯ！ＧＯ！イムラマート,GO! GO! IMR-Mart - IMR-Mart Theme song,https://twitter.com/kazuki232/status/1564993662689284099,2022,0901
+103,マスプロシスターズの修業時代,Human Life Consumption,https://twitter.com/kazuki232/status/1601600350846607362,2022,1211
+104,美しきヒトの子,Is only ideal your all?,https://twitter.com/kazuki232/status/1650775322680500224,2023,0425
+105,変身！KAWAIIコンテスト,Who the Heir?,https://twitter.com/kazuki232/status/1639633539078705152,2023,0325
+106,マスプロ強制恋愛教室,Romantic Curriculum,https://twitter.com/kazuki232/status/1668977087942623236,2023,0614
+107,Meal with Maidens,人機交替,https://twitter.com/kazuki232/status/1671533407132590080,2023,0621
+108,蒼月のドレス,Nostalgic Recollection,https://twitter.com/kazuki232/status/1652283449200496642,2023,0429
+EX9,地上４１５階の一室,Thanks for your cooperation,https://twitter.com/kazuki232/status/1717881728961016133,2023,1027
+109,野良猫量産型アイドルユニット,We are the Noracat World - Idol Song Edition,https://twitter.com/kazuki232/status/1679254561066983424,2023,0713
+110,変態技師の標本部屋,Unity of Avatars,https://twitter.com/kazuki232/status/1685517400450682881,2023,0730
+111,電脳サキュバス永久支配,Lethal Kawaii-move,https://twitter.com/kazuki232/status/1699064584018219126,2023,0905
+112,セカンドボナパルト,Seka and Bonaparte,https://twitter.com/kazuki232/status/1739267164023247221,2023,1004
+113,ニンゲンコスプレ,Happy Happy Halloween!!,https://twitter.com/kazuki232/status/1713205476668936613,2023,1014
+114,無題、または若きトルヴェールの詩,The Trouvere and The Troubadour,https://twitter.com/kazuki232/status/1720813388308283593,2023,1104
+115,擬古の語り部,Anonymous Storyteller,https://twitter.com/kazuki232/status/1722644894035132763,2023,1110
+116,聖母女伯爵の眠らない城,For The Great Three,https://twitter.com/kazuki232/status/1739263211566952880,2023,1201
+117,とある不思議な夜の女王のアリア,Diva from the Moon,https://twitter.com/kazuki232/status/1746114363692597609,2024,0113
+118,快き捕食,Remember What I am,https://twitter.com/kazuki232/status/1753789355649634621,2024,0203
+119,非道マッポーネコレイバー,Equal Opportunity,https://twitter.com/kazuki232/status/1760765916621709535,2024,0222
+120,イムラで働こう,GOOD COMPANY,https://x.com/kazuki232/status/1913622733445120064,2025,0420
+EX10,月見の丘の娘たち,Nemophira Night,,2025,0208
+121,ハルピュイア・ラボラトリー,The First Attack Ornithopter,https://twitter.com/kazuki232/status/1767936212604698741,2024,0313
+122,人でなしのドレスコード,Don't be Afraid of us,https://twitter.com/kazuki232/status/1771512627832713653,2024,0323
+123,食わずの食レポ,Symbol Grounding Report,https://twitter.com/kazuki232/status/1785262643508638099,2024,0430
+124,アイディア取り留めるノート,"ID : Atree, merunote",https://twitter.com/kazuki232/status/1786301836464701753,2024,0503
+125,イムラモールと四枚の円盤,Battle with XrossDiscs,https://twitter.com/kazuki232/status/1787037591638056992,2024,0505
+126,聖読する異形,The Author is My God,https://twitter.com/kazuki232/status/1793315789224943684,2024,0523
+127,一般清楚ファッションショー,Internet Fashion Show,https://twitter.com/kazuki232/status/1796883239635976227,2024,0601
+128,ヒミツのクラブの脚本指導,This is Still Practice,https://twitter.com/kazuki232/status/1799085953182793992,2024,0607
+129,テセウスの美しき廃船,Co-arising Atman,https://x.com/kazuki232/status/1809562113221816446,2024,0706
+130,夜月の喫茶と異形の喫茶,Superterranean Hell and Subterranean Heaven,https://x.com/kazuki232/status/1817415481801990593,2024,0728
+131,六年目の野良猫集会,,https://x.com/kazuki232/status/1822672861238321309,2024,0811
+132,ＮＯＲＡ党所信表明演説,Street Propaganda Car,https://x.com/kazuki232/status/1846558069905555607,2024,1016
+EX11,ネモフィラと月の見える道,Retrace My Life,https://x.com/kazuki232/status/1827008172453941295,2024,0824
+133,異形新兵集団行動,Distributed Computing,https://x.com/kazuki232/status/1825187652632781297,2024,0818
+134,廃棄地域の科学説,Is this Multiverse?,https://x.com/kazuki232/status/1862836426129478046,2024,1130
+135,アイドルますます増すキャッツ,Sample of the Idol,https://x.com/kazuki232/status/1844683626384146596,2024,1011
+136,マスプロネイティブ時代に向けて,Humble Brag,https://x.com/kazuki232/status/1858187862040350828,2024,1118
+137,ピュイア節,When Appear?,https://x.com/kazuki232/status/1863627153784602658,2024,1203
+138,アクアリウムダイバー,Pilgrimage - Sea Paradise,https://x.com/kazuki232/status/1875144327724405058,2025,0103
+139,神々の天使の梯子,Comment to Communicate!,https://x.com/kazuki232/status/1889340648005960168,2025,0212
+140,富士は世界一の山,Why has Mt.Fuji been Flying?,https://x.com/kazuki232/status/1892238768763031568,2025,0220
+141,永劫回帰への回帰,"Philosophical Notion, Machine Animal",https://x.com/kazuki232/status/1893669289816629379,2025,0223
+142,無智の痴情,Moral Hazard,https://x.com/kazuki232/status/1898316761256316999,2025,0308
+143,オルター・エゴ・エチュード,,https://x.com/kazuki232/status/1906384922023231523,2025,0331
+144,おのれのムラ,This is My Village,https://x.com/kazuki232/status/2036457275532124519,2026,0324
+EX12,ただの画に寄す,Just Identity,https://x.com/kazuki232/status/2034652825276518801,2026,0320
+145,情熱の復刻スースー水,,https://x.com/kazuki232/status/1917991875270840744,2025,0502
+146,ラストワンマイルは自然言語で,Outdated Network,https://x.com/kazuki232/status/1921608167303086547,2025,0512
+147,機械と懐胎,Next Generation,https://x.com/kazuki232/status/1928828446534234302,2025,0531
+148,うちのこ事件,,https://x.com/kazuki232/status/1932856902872141941,2025,0612
+149,まだ人間なんてやってるんですか？,,https://x.com/kazuki232/status/1941153064083505179,2025,0705
+150,変身マスプロ私はだあれ,Henshin Masscat 2,https://x.com/kazuki232/status/1952744374971850832,2025,0805
+151,百十三編の神話から,Into Animateness,https://x.com/kazuki232/status/1954133661684572359,2025,0809
+152,ティコのリモートアルバイト,,https://x.com/kazuki232/status/1954846650457096233,2025,0811
+153,無知の地上,,https://x.com/kazuki232/status/1956718365638275484,2025,0816
+154,百十三超の余罪,The Chosen One,https://x.com/kazuki232/status/1962526673720815959,2025,0901
+155,愛されたかった異形たち,Non-trivial Friends,https://x.com/kazuki232/status/1963236829957673263,2025,0903
+156,それでも世界は止まらない,Unfinished Events ～ E pur si muove,https://x.com/kazuki232/status/1967089506315890943,2025,0914
+EX13,生まれる前の自動作詞機,AI Lyrical Troubadour,https://x.com/kazuki232/status/2028144661446214088,2026,0302
+157,舞台の上の見聞歌,Idols of Wonderland,https://x.com/kazuki232/status/1997640976299413672,2025,1026
+158,国際ハルピュイア便,,https://x.com/kazuki232/status/1992578916033466463,2025,1123
+159,野良猫たちのブティック通り,Street-4360118,https://x.com/kazuki232/status/1997446203080929625,2025,1207
+160,刀匠素体伝説,TS_sotai,https://x.com/kazuki232/status/2007446980407042166,2026,0103
+161,シルバーキャットデモクラシー,Human Massify Project,https://x.com/kazuki232/status/2015364318523761103,2026,0125
+163,闇の地底チューリングツアー,Survive the Internet!!,https://x.com/kazuki232/status/2040422937057178033,2026,0404
+`;
+
+
 const themesCSV = `番号,曲名,宇宙,月面,地球,上層,中層,下層,廃棄地域,現実,バーチャル,概念,ＡＩ,生命論,ＩＭＲ,妖精orティンカーベル,のらきゃっと,ますきゃっと（一般）notますきゃユーザー,ますきゃっと（特殊）orますきゃユーザー,異形or超ノ級,ねずみさん,政治,科学,戦闘,食,写真or撮影orカメラ,アイドルorアイドルますきゃ,奏演者orAtree,第一義体,ネモフィラ,懐古,祈り,お砂糖or恋,インターネット,VRChat,配信,のらべり,学園,ユーザーイベント,クラシックアレンジ,創作物or創作論orｎ次創作,EXMass
 1,野良猫は不思議の国の夢を見るか,0,0,0,0,0,0,0,2,10,5,0,0,0,0,10,0,0,0,8,0,0,0,0,0,0,0,8,0,0,5,0,0,0,10,0,0,0,0,0,0
 2,ふしぎの多いスイートルーム,0,0,0,8,0,0,0,0,10,0,0,0,0,0,10,0,0,0,5,0,0,0,0,0,0,0,10,0,0,0,0,0,0,10,0,0,0,0,0,0
@@ -247,7 +427,6 @@ EX13,生まれる前の自動作詞機,0,5,0,0,0,0,0,8,8,0,10,0,6,0,0,5,0,0,0,0,
 161,シルバーキャットデモクラシー,0,0,0,0,0,5,2,10,8,0,0,0,10,0,0,8,0,0,0,10,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 163,闇の地底チューリングツアー,0,0,0,0,0,2,10,0,8,0,10,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,0
 999,のら！ちゃん！べりべりきゅーと！,0,0,0,0,0,0,0,10,8,0,0,0,0,0,10,0,0,0,10,0,0,0,0,0,5,0,0,0,0,10,0,0,0,10,10,0,0,0,0,0`;
-// ※容量の関係で一部のみ抜粋していますが、ここにお手元のCSVの全行を貼り付けることができます。
 
 const edgesCSV = `Source,Target,Type,Weight
 6,1,melody,2
@@ -1846,10 +2025,12 @@ const themesData = d3.csvParse(themesCSV);
 const edgesData = d3.csvParse(edgesCSV);
 const descData = d3.csvParse(descCSV);   // のらきゃソング_Desc_gemini.csv の内容
 const lyricData = d3.csvParse(lyricCSV); // のらきゃソング_Lyric_gemini.csv の内容
+const infoDataRaw = d3.csvParse(InfoCSV);
 
 // 検索しやすいように ID をキーにした辞書を作る
 const descMap = Object.fromEntries(descData.map(d => [d.番号, d.概要]));
 const lyricMap = Object.fromEntries(lyricData.map(d => [d.番号, d.歌いだし]));
+const infoMap = new Map(infoDataRaw.map(d => [d.番号, d]));
 
 const outerRadius = Math.min(width, height) * 0.42;
 const centerX = width / 2;
@@ -1947,6 +2128,49 @@ function showDetail(d) {
     const header = sidebar.append("div").attr("class", "detail-header");
     header.append("div").attr("class", "detail-id").text(d.type === 'song' ? `楽曲 ID: ${d.id}` : "テーマ - THEME NODE");
     header.append("div").attr("class", "detail-title").text(d.name).style("color", d.color);
+
+
+// --- infoData (CSV) から追加情報を取得して表示 ---
+    const info = infoMap.get(String(d.id));
+    if (info) {
+        // サブタイトル (曲名英語)
+        if (info.曲名英語) {
+            header.append("div")
+                .style("font-size", "13px")
+                .style("color", "#aaa")
+                .style("margin-top", "2px")
+                .text(info.曲名英語);
+        }
+
+        // 作曲日 (2024, 0503 -> 2024/05/03)
+        if (info.作曲年 && info.作曲月日) {
+            const y = info.作曲年;
+            const m = info.作曲月日.slice(0, 2);
+            const day = info.作曲月日.slice(2);
+            header.append("div")
+                .style("font-size", "12px")
+                .style("color", "#888")
+                .style("margin-top", "8px")
+                .text(`📅 作曲日: ${y}/${m}/${day}`);
+        }
+
+        // Twitter URL
+        if (info.Twitter) {
+            header.append("div")
+                .style("margin-top", "10px")
+                .append("a")
+                .attr("href", info.Twitter)
+                .attr("target", "_blank")
+                .style("color", "#00d4ff")
+                .style("text-decoration", "none")
+                .style("font-size", "12px")
+                .style("border", "1px solid #00d4ff")
+                .style("padding", "2px 8px")
+                .style("border-radius", "10px")
+                .text("🔗 Twitterで聴く");
+        }
+    }
+
 
     sidebar.append("div").attr("class", "section-label").text("概要 - Description");
     sidebar.append("div").attr("class", "detail-text").text(d.desc);
