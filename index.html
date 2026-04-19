@@ -43,6 +43,10 @@
                data-hashtags="のらきゃソングマップ" 
                data-show-count="false">Tweet</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <span style="font-size: 13px; margin-left: 15px;">
+        アルバムはこちら → <a href="https://atree.booth.pm/item_lists/8XAT4Axr" target="_blank" style="color: #00d4ff; text-decoration: none;">BOOTH</a>
+    </span>
         </div>
         <div class="instruction">● テーマクリック：<b>詳細表示 ＋ 引力のON/OFF</b></div>
         <div class="instruction">● 曲クリック：<b>詳細表示 ＋ カメラパン</b></div>
@@ -245,307 +249,1231 @@ EX13,生まれる前の自動作詞機,0,5,0,0,0,0,0,8,8,0,10,0,6,0,0,5,0,0,0,0,
 999,のら！ちゃん！べりべりきゅーと！,0,0,0,0,0,0,0,10,8,0,0,0,0,0,10,0,0,0,10,0,0,0,0,0,5,0,0,0,0,10,0,0,0,10,10,0,0,0,0,0`;
 // ※容量の関係で一部のみ抜粋していますが、ここにお手元のCSVの全行を貼り付けることができます。
 
-const edgesCSV = `Source,Target,Weight
-2,1,5
-6,1,8
-6,4,8
-7,1,5
-8,4,5
-9,1,3
-12,6,8
-16,15,10
-24,1,10
-24,4,5
-24,18,5
-26,8,5
-26,14,5
-26,10,8
-29,1,5
-29,10,3
-31,30,8
-32,8,5
-32,2,5
-34,2,8
-35,10,8
-35,21,8
-37,13,10
-40,22,8
-40,32,5
-41,1,10
-41,7,5
-41,42,8
-42,4,5
-42,7,5
-42,22,5
-42,EX2,8
-42,6,5
-48,30,10
-48,1,8
-48,8,8
-48,22,8
-48,31,8
-48,13,8
-48,23,8
-49,25,5
-49,27,5
-49,43,5
-49,45,5
-50,2,8
-53,2,8
-54,37,10
-55,48,10
-55,12,5
-56,29,10
-56,10,8
-58,11,8
-59,47,8
-59,10,8
-59,21,8
-59,35,8
-60,6,8
-EX5,6,8
-EX5,21,5
-EX5,26,5
-EX5,42,5
-62,11,8
-62,13,5
-63,1,5
-63,2,5
-64,23,8
-65,9,5
-66,32,5
-68,52,8
-68,49,8
-69,51,8
-69,25,8
-69,27,8
-69,49,8
-71,24,5
-71,18,8
-72,1,10
-72,57,5
-72,55,5
-72,59,5
-EX6,6,8
-EX6,57,3
-EX6,68,3
-EX6,59,8
-EX6,61,5
-EX6,62,5
-73,13,10
-73,8,5
-73,30,5
-73,36,5
-73,23,5
-73,21,5
-75,25,10
-76,10,5
-76,21,5
-78,29,8
-78,56,8
-78,1,5
-78,10,5
-81,2,5
-82,1,10
-83,49,8
-84,11,5
-84,14,5
-84,26,5
-84,42,5
-EX7,9,5
-EX7,23,5
-85,8,8
-85,86,10
-86,31,8
-86,26,8
-86,83,8
-86,EX4,8
-88,28,8
-88,58,8
-90,52,5
-90,68,10
-90,83,5
-91,13,8
-91,73,10
-93,77,8
-95,2,8
-95,25,10
-95,55,8
-95,10,5
-95,41,5
-95,23,5
-95,91,3
-95,33,5
-96,1,10
-96,7,10
-96,13,10
-96,22,10
-96,25,10
-96,EX7,10
-96,2,5
-96,9,5
-96,94,5
-EX8,22,5
-EX8,60,5
-97,23,8
-99,25,5
-99,89,8
-100,49,5
-101,89,10
-102,57,8
-103,49,10
-103,11,3
-104,68,8
-104,49,5
-105,13,5
-105,10,10
-105,37,8
-105,21,8
-105,97,5
-105,33,3
-106,52,5
-106,90,8
-107,52,8
-108,4,8
-EX9,47,5
-EX9,59,8
-EX9,2,5
-109,48,10
-109,83,10
-110,30,5
-111,10,5
-111,49,8
-111,90,8
-111,107,5
-112,85,8
-112,90,8
-112,68,5
-114,8,5
-114,32,5
-114,13,5
-115,71,8
-116,82,8
-116,97,8
-116,150,3
-116,151,3
-116,121,3
-117,56,5
-117,91,5
-117,25,5
-118,34,3
-EX10,14,5
-EX10,8,5
-EX10,13,5
-121,25,5
-122,33,8
-122,2,5
-122,95,5
-124,31,8
-124,86,8
-124,77,8
-124,93,8
-124,56,8
-125,104,10
-126,1,5
-126,59,8
-126,89,5
-127,89,3
-127,130,3
-128,68,8
-128,106,8
-128,90,8
-129,41,5
-130,89,10
-130,101,8
-130,107,5
-130,111,5
-130,121,5
-130,122,5
-131,1,8
-131,7,8
-EX11,EX7,8
-133,61,10
-135,1,8
-135,EX7,5
-135,30,5
-136,94,5
-137,89,3
-138,62,5
-140,47,10
-140,59,5
-141,49,8
-142,49,8
-143,21,5
-144,51,5
-EX12,42,8
-EX12,EX8,5
-EX12,123,5
-145,58,5
-145,88,5
-145,70,8
-145,123,8
-145,81,5
-145,2,5
-146,68,10
-146,100,8
-146,49,5
-146,111,5
-146,142,5
-147,18,8
-147,94,8
-148,59,5
-150,7,5
-151,56,8
-151,31,5
-152,18,8
-152,43,10
-153,142,10
-153,49,5
-153,111,8
-154,150,8
-154,151,8
-155,89,10
-155,101,10
-155,113,5
-156,151,5
-156,85,5
-156,116,5
-156,150,5
-156,121,5
-156,137,5
-156,81,3
-156,62,3
-EX13,152,10
-EX13,EX4,8
-EX13,43,5
-EX13,103,5
-EX13,47,5
-EX13,123,5
-157,109,10
-157,135,10
-158,89,5
-158,101,5
-158,122,5
-159,50,8
-159,73,8
-159,13,5
-159,102,5
-160,30,10
-160,23,5
-160,56,5
-160,73,5
-161,49,8
-161,75,8
-161,87,8
-161,98,8
-161,111,8
-161,132,8
-161,135,8
-161,136,8
-161,146,8
-161,148,8
-161,149,8
-163,152,8`;
+const edgesCSV = `Source,Target,Type,Weight
+6,1,melody,2
+9,1,melody,2
+12,1,melody,2
+EX1,1,melody,2
+14,1,melody,2
+20,8,melody,2
+24,1,melody,2
+28,2,melody,2
+29,1,melody,2
+30,25,melody,2
+30,1,melody,2
+32,1,melody,2
+34,1,melody,2
+36,30,melody,2
+38,1,melody,2
+38,14,melody,2
+40,1,melody,2
+40,EX1,melody,2
+41,1,melody,2
+43,25,melody,2
+46,1,melody,2
+48,31,melody,2
+48,1,melody,2
+48,10,melody,2
+48,30,melody,2
+48,8,melody,2
+EX4,10,melody,2
+EX4,32,melody,2
+EX4,8,melody,2
+EX4,1,melody,2
+49,1,melody,2
+50,2,melody,2
+51,25,melody,2
+52,1,melody,2
+54,37,melody,2
+56,10,melody,2
+56,1,melody,2
+56,44,melody,2
+59,10,melody,2
+60,1,melody,2
+EX5,1,melody,2
+62,2,melody,2
+62,1,melody,2
+63,1,melody,2
+65,1,melody,2
+66,2,melody,2
+67,57,melody,2
+68,49,melody,2
+68,32,melody,2
+69,25,melody,2
+69,49,melody,2
+69,27,melody,2
+70,1,melody,2
+71,18,melody,2
+72,1,melody,2
+EX6,32,melody,2
+EX6,1,melody,2
+73,13,melody,2
+76,1,melody,2
+76,21,melody,2
+76,10,melody,2
+77,25,melody,2
+78,1,melody,2
+79,1,melody,2
+82,1,melody,2
+83,68,melody,2
+83,49,melody,2
+84,14,melody,2
+84,26,melody,2
+EX7,1,melody,2
+85,8,melody,2
+86,31,melody,2
+86,26,melody,2
+87,1,melody,2
+88,28,melody,2
+88,58,melody,2
+89,25,melody,2
+89,75,melody,2
+90,52,melody,2
+90,68,melody,2
+91,73,melody,2
+91,13,melody,2
+93,77,melody,2
+93,1,melody,2
+93,42,melody,2
+95,25,melody,2
+95,55,melody,2
+95,2,melody,2
+95,33,melody,2
+95,41,melody,2
+95,10,melody,2
+96,1,melody,2
+96,13,melody,2
+96,22,melody,2
+96,7,melody,2
+96,25,melody,2
+96,EX7,melody,2
+EX8,1,melody,2
+EX8,EX7,melody,2
+EX8,2,melody,2
+EX8,66,melody,2
+97,1,melody,2
+97,23,melody,2
+100,49,melody,2
+101,89,melody,2
+102,25,melody,2
+102,1,melody,2
+103,25,melody,2
+103,49,melody,2
+104,68,melody,2
+105,10,melody,2
+105,37,melody,2
+105,21,melody,2
+105,97,melody,2
+106,68,melody,2
+107,52,melody,2
+108,4,melody,2
+EX9,59,melody,2
+EX9,2,melody,2
+109,48,melody,2
+109,83,melody,2
+111,85,melody,2
+112,85,melody,2
+112,68,melody,2
+112,90,melody,2
+112,8,melody,2
+113,10,melody,2
+113,7,melody,2
+114,1,melody,2
+116,97,melody,2
+116,82,melody,2
+EX10,35,melody,2
+EX10,40,melody,2
+124,77,melody,2
+124,93,melody,2
+124,56,melody,2
+125,102,melody,2
+125,104,melody,2
+126,59,melody,2
+126,89,melody,2
+126,1,melody,2
+128,68,melody,2
+130,107,melody,2
+131,1,melody,2
+131,7,melody,2
+132,102,melody,2
+EX11,1,melody,2
+EX11,EX7,melody,2
+EX11,82,melody,2
+133,61,melody,2
+135,30,melody,2
+135,EX7,melody,2
+135,1,melody,2
+136,94,melody,2
+140,47,melody,2
+144,25,melody,2
+EX12,1,melody,2
+146,68,melody,2
+146,100,melody,2
+147,18,melody,2
+147,94,melody,2
+150,7,melody,2
+151,56,melody,2
+151,31,melody,2
+152,43,melody,2
+152,18,melody,2
+156,89,melody,2
+156,33,melody,2
+156,101,melody,2
+EX13,EX4,melody,2
+157,EX7,melody,2
+157,135,melody,2
+158,89,melody,2
+159,73,melody,2
+159,50,melody,2
+159,13,melody,2
+160,1,melody,2
+160,102,melody,2
+160,30,melody,2
+161,87,melody,2
+161,136,melody,2
+161,49,melody,2
+163,152,melody,2
+163,49,melody,2
+999,1,melody,2
+2,1,context,1
+5,3,context,1
+5,18,context,1
+6,1,context,1
+6,4,context,1
+6,EX6,context,1
+6,60,context,1
+6,84,context,1
+6,42,context,1
+6,22,context,1
+7,1,context,1
+7,40,context,1
+7,131,context,1
+7,139,context,1
+7,127,context,1
+8,1,context,1
+8,22,context,1
+8,18,context,1
+8,131,context,1
+8,12,context,1
+9,1,context,1
+9,EX3,context,1
+10,76,context,1
+10,105,context,1
+10,131,context,1
+10,21,context,1
+11,62,context,1
+11,EX1,context,1
+11,70,context,1
+11,84,context,1
+11,3,context,1
+11,14,context,1
+11,145,context,1
+12,6,context,1
+12,76,context,1
+12,EX6,context,1
+12,2,context,1
+12,7,context,1
+12,96,context,1
+EX1,11,context,1
+EX1,50,context,1
+EX1,72,context,1
+EX1,85,context,1
+EX1,EX8,context,1
+EX1,12,context,1
+13,8,context,1
+13,85,context,1
+13,54,context,1
+13,122,context,1
+13,135,context,1
+13,111,context,1
+13,EX7,context,1
+13,143,context,1
+13,21,context,1
+13,33,context,1
+14,EX6,context,1
+14,39,context,1
+14,EX12,context,1
+14,40,context,1
+14,131,context,1
+14,26,context,1
+14,59,context,1
+14,129,context,1
+15,75,context,1
+15,36,context,1
+15,135,context,1
+15,43,context,1
+15,4,context,1
+15,91,context,1
+15,61,context,1
+15,33,context,1
+15,121,context,1
+16,15,context,1
+16,9,context,1
+16,95,context,1
+16,136,context,1
+16,160,context,1
+16,EX11,context,1
+16,4,context,1
+16,34,context,1
+16,80,context,1
+16,30,context,1
+17,1,context,1
+17,65,context,1
+17,82,context,1
+17,109,context,1
+17,62,context,1
+17,22,context,1
+17,48,context,1
+17,131,context,1
+17,56,context,1
+17,136,context,1
+18,5,context,1
+18,EX12,context,1
+18,139,context,1
+18,31,context,1
+18,39,context,1
+18,60,context,1
+18,EX8,context,1
+18,EX13,context,1
+18,103,context,1
+18,23,context,1
+19,34,context,1
+19,18,context,1
+19,134,context,1
+19,EX13,context,1
+19,23,context,1
+20,17,context,1
+20,19,context,1
+20,93,context,1
+20,97,context,1
+20,21,context,1
+20,131,context,1
+20,8,context,1
+20,100,context,1
+20,71,context,1
+21,3,context,1
+21,12,context,1
+21,143,context,1
+21,4,context,1
+21,EX2,context,1
+21,2,context,1
+21,85,context,1
+21,76,context,1
+21,32,context,1
+21,10,context,1
+22,9,context,1
+22,6,context,1
+22,96,context,1
+22,11,context,1
+22,EX1,context,1
+22,59,context,1
+22,8,context,1
+22,EX7,context,1
+22,139,context,1
+22,60,context,1
+22,145,context,1
+23,116,context,1
+23,29,context,1
+23,91,context,1
+23,40,context,1
+23,11,context,1
+23,160,context,1
+23,13,context,1
+23,97,context,1
+23,114,context,1
+23,93,context,1
+23,EX8,context,1
+23,96,context,1
+23,EX13,context,1
+23,32,context,1
+24,1,context,1
+24,2,context,1
+24,7,context,1
+24,8,context,1
+24,18,context,1
+24,71,context,1
+24,12,context,1
+24,95,context,1
+24,19,context,1
+24,48,context,1
+24,30,context,1
+24,10,context,1
+EX2,1,context,1
+EX2,33,context,1
+EX2,21,context,1
+EX2,76,context,1
+EX2,32,context,1
+EX2,23,context,1
+EX2,97,context,1
+25,15,context,1
+25,75,context,1
+25,134,context,1
+25,89,context,1
+25,102,context,1
+25,43,context,1
+26,EX7,context,1
+26,100,context,1
+26,19,context,1
+26,142,context,1
+26,153,context,1
+26,154,context,1
+26,10,context,1
+27,69,context,1
+27,134,context,1
+27,45,context,1
+27,102,context,1
+27,43,context,1
+27,61,context,1
+27,67,context,1
+28,88,context,1
+28,25,context,1
+28,29,context,1
+28,17,context,1
+28,78,context,1
+28,4,context,1
+29,8,context,1
+29,18,context,1
+29,EX12,context,1
+29,29,context,1
+29,EX13,context,1
+29,32,context,1
+29,23,context,1
+29,97,context,1
+29,24,context,1
+29,20,context,1
+29,126,context,1
+29,EX9,context,1
+29,79,context,1
+29,1,context,1
+30,1,context,1
+30,21,context,1
+30,31,context,1
+30,91,context,1
+30,160,context,1
+30,32,context,1
+30,94,context,1
+30,114,context,1
+30,96,context,1
+30,73,context,1
+30,48,context,1
+31,30,context,1
+31,94,context,1
+31,22,context,1
+31,2,context,1
+31,109,context,1
+31,103,context,1
+31,56,context,1
+31,10,context,1
+31,68,context,1
+31,64,context,1
+31,23,context,1
+32,30,context,1
+32,31,context,1
+32,14,context,1
+32,6,context,1
+32,60,context,1
+32,33,context,1
+32,37,context,1
+32,EX6,context,1
+32,82,context,1
+32,83,context,1
+32,86,context,1
+32,90,context,1
+32,93,context,1
+32,108,context,1
+32,114,context,1
+32,59,context,1
+32,68,context,1
+33,7,context,1
+33,26,context,1
+33,123,context,1
+33,153,context,1
+33,149,context,1
+33,35,context,1
+33,129,context,1
+33,98,context,1
+34,118,context,1
+34,38,context,1
+34,EX7,context,1
+34,1,context,1
+34,93,context,1
+34,72,context,1
+34,24,context,1
+35,EX10,context,1
+35,31,context,1
+35,32,context,1
+35,21,context,1
+35,62,context,1
+35,20,context,1
+35,157,context,1
+35,56,context,1
+36,15,context,1
+36,73,context,1
+36,75,context,1
+36,61,context,1
+36,89,context,1
+36,91,context,1
+36,111,context,1
+EX3,11,context,1
+EX3,9,context,1
+EX3,24,context,1
+EX3,EX1,context,1
+37,105,context,1
+37,150,context,1
+37,4,context,1
+37,118,context,1
+37,10,context,1
+38,19,context,1
+38,18,context,1
+38,EX11,context,1
+38,34,context,1
+38,EX7,context,1
+38,22,context,1
+39,105,context,1
+39,32,context,1
+39,EX8,context,1
+39,56,context,1
+39,85,context,1
+40,EX1,context,1
+40,131,context,1
+40,8,context,1
+40,EX10,context,1
+40,30,context,1
+40,29,context,1
+40,46,context,1
+40,22,context,1
+40,14,context,1
+41,108,context,1
+41,42,context,1
+41,EX10,context,1
+41,72,context,1
+41,95,context,1
+42,1,context,1
+42,EX11,context,1
+42,4,context,1
+42,7,context,1
+42,41,context,1
+42,22,context,1
+42,EX2,context,1
+42,93,context,1
+42,39,context,1
+42,94,context,1
+42,EX13,context,1
+43,25,context,1
+43,EX13,context,1
+43,103,context,1
+43,152,context,1
+43,111,context,1
+43,107,context,1
+43,133,context,1
+43,67,context,1
+43,15,context,1
+43,68,context,1
+44,23,context,1
+44,EX13,context,1
+44,30,context,1
+44,92,context,1
+44,25,context,1
+45,27,context,1
+45,EX4,context,1
+45,147,context,1
+46,4,context,1
+46,8,context,1
+46,96,context,1
+46,59,context,1
+46,56,context,1
+46,52,context,1
+47,53,context,1
+47,59,context,1
+47,140,context,1
+47,25,context,1
+47,103,context,1
+48,1,context,1
+48,8,context,1
+48,22,context,1
+48,30,context,1
+48,31,context,1
+48,96,context,1
+48,108,context,1
+48,109,context,1
+48,131,context,1
+EX4,129,context,1
+EX4,21,context,1
+EX4,26,context,1
+EX4,30,context,1
+EX4,33,context,1
+EX4,25,context,1
+EX4,35,context,1
+EX4,32,context,1
+EX4,EX13,context,1
+EX4,94,context,1
+EX4,31,context,1
+EX4,8,context,1
+EX4,112,context,1
+EX4,143,context,1
+EX4,18,context,1
+EX4,19,context,1
+EX4,10,context,1
+49,25,context,1
+49,27,context,1
+49,43,context,1
+49,45,context,1
+49,103,context,1
+49,81,context,1
+49,86,context,1
+49,111,context,1
+49,EX13,context,1
+49,97,context,1
+49,68,context,1
+50,2,context,1
+50,159,context,1
+50,EX10,context,1
+50,EX8,context,1
+50,4,context,1
+50,95,context,1
+51,25,context,1
+51,27,context,1
+51,56,context,1
+51,89,context,1
+51,8,context,1
+51,84,context,1
+51,21,context,1
+51,61,context,1
+52,107,context,1
+52,106,context,1
+52,90,context,1
+52,88,context,1
+52,130,context,1
+52,65,context,1
+52,68,context,1
+53,2,context,1
+53,52,context,1
+54,37,context,1
+54,89,context,1
+54,75,context,1
+54,13,context,1
+54,110,context,1
+55,1,context,1
+55,12,context,1
+55,48,context,1
+55,29,context,1
+55,56,context,1
+55,78,context,1
+56,29,context,1
+56,32,context,1
+56,91,context,1
+56,89,context,1
+56,85,context,1
+56,10,context,1
+57,102,context,1
+57,27,context,1
+57,67,context,1
+58,24,context,1
+58,123,context,1
+59,47,context,1
+59,130,context,1
+59,56,context,1
+59,126,context,1
+59,97,context,1
+59,32,context,1
+59,94,context,1
+59,10,context,1
+60,6,context,1
+60,42,context,1
+60,26,context,1
+60,39,context,1
+60,30,context,1
+60,EX13,context,1
+60,EX8,context,1
+EX5,4,context,1
+EX5,6,context,1
+EX5,EX10,context,1
+EX5,118,context,1
+EX5,999,context,1
+EX5,85,context,1
+EX5,21,context,1
+61,25,context,1
+61,43,context,1
+61,121,context,1
+62,2,context,1
+62,1,context,1
+62,8,context,1
+62,11,context,1
+62,EX1,context,1
+62,EX13,context,1
+62,40,context,1
+63,1,context,1
+63,2,context,1
+63,90,context,1
+63,129,context,1
+63,163,context,1
+64,23,context,1
+64,29,context,1
+64,56,context,1
+64,94,context,1
+65,1,context,1
+65,48,context,1
+65,2,context,1
+65,EX1,context,1
+65,40,context,1
+65,118,context,1
+65,72,context,1
+65,52,context,1
+65,85,context,1
+65,22,context,1
+65,29,context,1
+65,10,context,1
+66,2,context,1
+66,6,context,1
+66,86,context,1
+66,83,context,1
+66,1,context,1
+66,17,context,1
+66,50,context,1
+66,12,context,1
+67,57,context,1
+67,47,context,1
+67,27,context,1
+67,125,context,1
+68,49,context,1
+68,52,context,1
+68,83,context,1
+68,153,context,1
+69,27,context,1
+69,51,context,1
+69,134,context,1
+69,89,context,1
+69,99,context,1
+69,141,context,1
+70,11,context,1
+70,81,context,1
+70,53,context,1
+70,123,context,1
+71,18,context,1
+71,24,context,1
+71,29,context,1
+71,31,context,1
+72,2,context,1
+72,16,context,1
+72,25,context,1
+72,30,context,1
+72,49,context,1
+72,57,context,1
+72,67,context,1
+72,59,context,1
+72,47,context,1
+72,55,context,1
+EX6,84,context,1
+EX6,14,context,1
+EX6,59,context,1
+EX6,78,context,1
+EX6,33,context,1
+EX6,24,context,1
+EX6,61,context,1
+EX6,EX11,context,1
+EX6,16,context,1
+EX6,68,context,1
+73,8,context,1
+73,13,context,1
+73,43,context,1
+73,56,context,1
+73,159,context,1
+73,127,context,1
+73,30,context,1
+73,36,context,1
+73,21,context,1
+73,10,context,1
+74,127,context,1
+75,51,context,1
+75,11,context,1
+75,25,context,1
+75,49,context,1
+75,999,context,1
+75,95,context,1
+75,163,context,1
+76,8,context,1
+76,21,context,1
+76,4,context,1
+76,1,context,1
+76,108,context,1
+76,10,context,1
+77,49,context,1
+77,32,context,1
+77,107,context,1
+77,68,context,1
+78,30,context,1
+78,29,context,1
+78,56,context,1
+78,126,context,1
+78,91,context,1
+78,115,context,1
+78,94,context,1
+78,52,context,1
+79,25,context,1
+79,29,context,1
+79,1,context,1
+80,11,context,1
+80,62,context,1
+80,84,context,1
+81,7,context,1
+81,70,context,1
+81,85,context,1
+81,58,context,1
+81,11,context,1
+82,1,context,1
+82,83,context,1
+82,93,context,1
+82,85,context,1
+82,68,context,1
+83,26,context,1
+83,EX4,context,1
+83,49,context,1
+83,82,context,1
+83,80,context,1
+83,1,context,1
+83,109,context,1
+83,68,context,1
+84,11,context,1
+84,33,context,1
+84,4,context,1
+84,37,context,1
+84,42,context,1
+84,62,context,1
+84,46,context,1
+84,80,context,1
+EX7,1,context,1
+EX7,29,context,1
+EX7,EX10,context,1
+EX7,26,context,1
+EX7,40,context,1
+EX7,23,context,1
+EX7,21,context,1
+EX7,32,context,1
+85,8,context,1
+85,61,context,1
+85,81,context,1
+85,46,context,1
+85,86,context,1
+85,30,context,1
+85,47,context,1
+85,EX13,context,1
+86,3,context,1
+86,26,context,1
+86,31,context,1
+86,EX4,context,1
+86,83,context,1
+86,29,context,1
+87,46,context,1
+87,25,context,1
+87,49,context,1
+87,51,context,1
+87,69,context,1
+87,68,context,1
+88,28,context,1
+88,58,context,1
+88,75,context,1
+88,9,context,1
+88,81,context,1
+88,25,context,1
+89,79,context,1
+89,45,context,1
+89,2,context,1
+89,99,context,1
+89,61,context,1
+89,54,context,1
+89,36,context,1
+89,87,context,1
+90,52,context,1
+90,63,context,1
+90,146,context,1
+90,49,context,1
+90,68,context,1
+91,78,context,1
+91,73,context,1
+91,30,context,1
+91,36,context,1
+91,13,context,1
+91,56,context,1
+92,43,context,1
+92,25,context,1
+92,78,context,1
+92,14,context,1
+92,46,context,1
+92,28,context,1
+93,59,context,1
+93,42,context,1
+93,77,context,1
+93,46,context,1
+93,32,context,1
+93,39,context,1
+94,48,context,1
+94,8,context,1
+94,78,context,1
+94,30,context,1
+94,97,context,1
+94,56,context,1
+95,41,context,1
+95,25,context,1
+95,55,context,1
+95,2,context,1
+95,91,context,1
+95,23,context,1
+95,33,context,1
+96,22,context,1
+96,7,context,1
+96,4,context,1
+96,25,context,1
+96,1,context,1
+96,EX1,context,1
+96,59,context,1
+EX8,2,context,1
+EX8,3,context,1
+EX8,17,context,1
+EX8,34,context,1
+EX8,42,context,1
+EX8,7,context,1
+EX8,66,context,1
+97,1,context,1
+97,23,context,1
+97,116,context,1
+97,20,context,1
+98,110,context,1
+98,31,context,1
+98,94,context,1
+98,78,context,1
+98,7,context,1
+99,89,context,1
+99,85,context,1
+99,101,context,1
+99,75,context,1
+99,87,context,1
+100,146,context,1
+100,20,context,1
+100,49,context,1
+100,21,context,1
+100,96,context,1
+101,89,context,1
+101,17,context,1
+101,130,context,1
+101,62,context,1
+102,57,context,1
+102,67,context,1
+102,125,context,1
+102,25,context,1
+103,100,context,1
+103,86,context,1
+103,49,context,1
+103,8,context,1
+103,96,context,1
+104,83,context,1
+104,125,context,1
+104,79,context,1
+104,85,context,1
+104,43,context,1
+104,68,context,1
+105,150,context,1
+105,37,context,1
+105,21,context,1
+105,97,context,1
+105,48,context,1
+105,10,context,1
+106,104,context,1
+106,83,context,1
+106,49,context,1
+106,54,context,1
+106,36,context,1
+106,68,context,1
+107,52,context,1
+107,43,context,1
+107,111,context,1
+107,130,context,1
+107,59,context,1
+107,37,context,1
+107,141,context,1
+108,4,context,1
+108,16,context,1
+108,85,context,1
+108,37,context,1
+108,1,context,1
+108,97,context,1
+108,68,context,1
+EX9,59,context,1
+EX9,29,context,1
+EX9,56,context,1
+EX9,78,context,1
+EX9,31,context,1
+109,85,context,1
+109,14,context,1
+109,72,context,1
+109,94,context,1
+109,20,context,1
+109,17,context,1
+109,52,context,1
+110,30,context,1
+110,89,context,1
+110,25,context,1
+110,15,context,1
+110,31,context,1
+110,13,context,1
+111,90,context,1
+111,49,context,1
+111,25,context,1
+111,130,context,1
+111,153,context,1
+111,21,context,1
+111,10,context,1
+112,109,context,1
+112,85,context,1
+112,90,context,1
+112,8,context,1
+112,1,context,1
+112,83,context,1
+112,68,context,1
+113,149,context,1
+113,7,context,1
+113,52,context,1
+113,73,context,1
+113,127,context,1
+113,10,context,1
+114,1,context,1
+114,32,context,1
+114,8,context,1
+114,13,context,1
+114,62,context,1
+115,78,context,1
+115,103,context,1
+115,31,context,1
+115,25,context,1
+116,97,context,1
+116,150,context,1
+116,4,context,1
+116,82,context,1
+116,35,context,1
+116,94,context,1
+116,73,context,1
+117,56,context,1
+117,91,context,1
+117,109,context,1
+117,48,context,1
+118,34,context,1
+118,22,context,1
+118,40,context,1
+118,3,context,1
+118,12,context,1
+119,52,context,1
+119,EX10,context,1
+119,120,context,1
+119,81,context,1
+119,23,context,1
+120,132,context,1
+120,67,context,1
+120,57,context,1
+120,98,context,1
+EX10,EX11,context,1
+EX10,93,context,1
+EX10,EX1,context,1
+EX10,50,context,1
+EX10,119,context,1
+EX10,EX5,context,1
+EX10,6,context,1
+121,110,context,1
+121,61,context,1
+121,89,context,1
+121,107,context,1
+122,2,context,1
+122,95,context,1
+122,121,context,1
+122,33,context,1
+122,36,context,1
+123,58,context,1
+123,81,context,1
+123,18,context,1
+123,103,context,1
+124,31,context,1
+124,56,context,1
+124,77,context,1
+124,83,context,1
+124,85,context,1
+124,86,context,1
+124,93,context,1
+125,102,context,1
+125,51,context,1
+125,104,context,1
+125,61,context,1
+126,89,context,1
+126,49,context,1
+126,59,context,1
+126,78,context,1
+126,EX9,context,1
+126,86,context,1
+127,73,context,1
+127,85,context,1
+127,97,context,1
+127,113,context,1
+127,10,context,1
+128,104,context,1
+128,83,context,1
+128,49,context,1
+128,103,context,1
+128,68,context,1
+129,118,context,1
+129,8,context,1
+129,40,context,1
+129,12,context,1
+130,101,context,1
+130,107,context,1
+130,49,context,1
+130,59,context,1
+130,122,context,1
+131,96,context,1
+131,21,context,1
+131,98,context,1
+131,7,context,1
+131,1,context,1
+131,91,context,1
+131,95,context,1
+132,102,context,1
+132,149,context,1
+132,98,context,1
+132,139,context,1
+132,120,context,1
+EX11,55,context,1
+EX11,42,context,1
+EX11,1,context,1
+EX11,EX1,context,1
+EX11,EX7,context,1
+EX11,38,context,1
+133,89,context,1
+133,61,context,1
+133,54,context,1
+133,75,context,1
+133,110,context,1
+134,27,context,1
+134,136,context,1
+134,75,context,1
+135,30,context,1
+135,1,context,1
+135,8,context,1
+135,94,context,1
+135,61,context,1
+135,96,context,1
+136,49,context,1
+136,134,context,1
+136,160,context,1
+136,EX1,context,1
+136,29,context,1
+136,8,context,1
+136,108,context,1
+137,121,context,1
+137,135,context,1
+137,95,context,1
+137,8,context,1
+137,48,context,1
+138,146,context,1
+138,20,context,1
+138,85,context,1
+138,123,context,1
+139,91,context,1
+139,4,context,1
+139,EX1,context,1
+139,134,context,1
+139,98,context,1
+139,85,context,1
+140,47,context,1
+141,134,context,1
+141,149,context,1
+141,98,context,1
+141,49,context,1
+141,27,context,1
+142,26,context,1
+142,49,context,1
+143,86,context,1
+143,21,context,1
+143,39,context,1
+143,149,context,1
+143,22,context,1
+144,98,context,1
+144,149,context,1
+144,59,context,1
+144,120,context,1
+EX12,1,context,1
+EX12,32,context,1
+EX12,EX8,context,1
+EX12,60,context,1
+EX12,42,context,1
+145,58,context,1
+145,70,context,1
+145,118,context,1
+146,68,context,1
+146,100,context,1
+146,98,context,1
+147,146,context,1
+147,49,context,1
+147,103,context,1
+147,18,context,1
+148,59,context,1
+148,31,context,1
+148,67,context,1
+149,98,context,1
+149,100,context,1
+150,7,context,1
+150,10,context,1
+151,150,context,1
+151,31,context,1
+151,134,context,1
+152,43,context,1
+152,18,context,1
+152,103,context,1
+153,136,context,1
+153,142,context,1
+153,111,context,1
+153,98,context,1
+153,49,context,1
+154,150,context,1
+154,151,context,1
+155,89,context,1
+155,154,context,1
+155,101,context,1
+156,157,context,1
+156,137,context,1
+156,48,context,1
+156,97,context,1
+156,150,context,1
+156,121,context,1
+EX13,152,context,1
+EX13,42,context,1
+EX13,47,context,1
+EX13,85,context,1
+EX13,32,context,1
+EX13,EX4,context,1
+157,1,context,1
+157,8,context,1
+157,EX1,context,1
+157,23,context,1
+157,109,context,1
+157,135,context,1
+157,62,context,1
+158,89,context,1
+158,153,context,1
+158,139,context,1
+159,73,context,1
+159,50,context,1
+160,115,context,1
+160,56,context,1
+160,75,context,1
+160,102,context,1
+160,91,context,1
+160,73,context,1
+160,30,context,1
+161,49,context,1
+161,149,context,1
+161,98,context,1
+161,75,context,1
+161,EX13,context,1
+161,13,context,1
+163,115,context,1
+163,134,context,1
+999,1,context,1`;
 // ※ここもお手元の edges ファイルの内容を貼り付けてください。
 
 const descCSV = `番号,曲名,概要
@@ -976,7 +1904,14 @@ themesData.forEach(d => {
 });
 
 edgesData.forEach(d => {
-    if(d.Source && d.Target) allLinks.push({ source: d.Source, target: d.Target, value: +d.Weight, type: 'song-link' });
+    if(d.Source && d.Target) {
+        allLinks.push({ 
+            source: d.Source, 
+            target: d.Target, 
+            value: +d.Weight, 
+            type: d.Type || 'song-link' // ここを変更
+        });
+    }
 });
 
 // --- D3 セットアップ ---
@@ -1016,45 +1951,139 @@ function showDetail(d) {
     sidebar.append("div").attr("class", "section-label").text("概要 - Description");
     sidebar.append("div").attr("class", "detail-text").text(d.desc);
 
-if (d.type === 'song') {
-    sidebar.append("div").attr("class", "section-label").text("歌いだし - Lyrics / Intro");
-    sidebar.append("div")
-        .attr("class", "detail-text")
-        .style("font-style", "italic") // 斜体にする
-        .style("border-left", "2px solid #555") // 左側に線を引く
-        .style("padding-left", "10px")
-        .text(`“ ${d.lyrics} ”`);
-}
+    if (d.type === 'song') {
+        sidebar.append("div").attr("class", "section-label").text("歌いだし - Lyrics / Intro");
+        sidebar.append("div")
+            .attr("class", "detail-text")
+            .style("font-style", "italic")
+            .style("border-left", "2px solid #555")
+            .style("padding-left", "10px")
+            .text(`“ ${d.lyrics} ”`);
+    }
 
-    sidebar.append("div").attr("class", "section-label").text(d.type === 'song' ? "所属テーマ - Connected Themes" : "関連曲 - Belonging Songs");
-    const list = sidebar.append("ul").attr("class", "node-list");
-    const connections = allLinks.filter(l => (l.source.id||l.source) === d.id || (l.target.id||l.target) === d.id);
-    const neighbors = [...new Set(connections.map(l => {
-        const tid = (l.source.id||l.source) === d.id ? (l.target.id||l.target) : (l.source.id||l.source);
-        return nodes.find(n => n.id == tid);
-    }))].filter(n => n && n.id !== d.id);
+    // --- ここからグループ分け表示の処理 ---
 
-    neighbors.forEach(n => {
-        list.append("li").attr("class", "node-item").text(`${n.type==='song'?'🎵':'🏷️'} ${n.name}`)
-            .on("click", () => focusNode(n.id));
+    // 1. このノードに関係するすべてのリンクを取得
+    const connections = allLinks.filter(l => (l.source.id || l.source) === d.id || (l.target.id || l.target) === d.id);
+
+    // 重複を除いて件数を数えるヘルパー関数
+    const getUniqueCount = (type) => {
+        const uniqueIds = new Set();
+        connections.filter(l => l.type === type).forEach(l => {
+            // 自分じゃない方のIDをSetに追加
+            const sourceId = l.source.id || l.source;
+            const targetId = l.target.id || l.target;
+            uniqueIds.add(sourceId === d.id ? targetId : sourceId);
+        });
+        return uniqueIds.size;
+    };
+
+    // 2. 表示したいグループの定義
+    const groupDef = [
+        { 
+            type: 'cat-link', 
+            label: (d.type === 'song' ? "所属テーマ" : "所属楽曲") + `：${getUniqueCount('cat-link')}`, 
+            icon: d.type === 'category' ? '🎵' : '🏷️' 
+        },
+        { 
+            type: 'melody',  
+            label: `引用曲（メロディ）：${getUniqueCount('melody')}`, 
+            icon: '🎵' 
+        },
+        { 
+            type: 'context', 
+            label: `関連曲（文脈）：${getUniqueCount('context')}`, 
+            icon: '🔗' 
+        }
+    ];
+
+    // 3. 各グループごとにリストを作成
+    groupDef.forEach(group => {
+        const groupLinks = connections.filter(l => l.type === group.type);
+
+        if (groupLinks.length > 0) {
+            sidebar.append("div").attr("class", "section-label").text(group.label);
+            const list = sidebar.append("ul").attr("class", "node-list");
+
+            // --- データの整理（重複排除と ID順ソート） ---
+            const processedNodes = groupLinks.map(l => {
+                const sId = l.source.id || l.source;
+                const tId = l.target.id || l.target;
+                const isOutgoing = (sId === d.id);
+                const partnerId = isOutgoing ? tId : sId;
+                const partnerNode = nodes.find(node => node.id == partnerId);
+                return { node: partnerNode, isOutgoing: isOutgoing };
+            })
+            .filter(item => item.node)
+            .filter((v, i, a) => a.findIndex(t => t.node.id === v.node.id) === i)
+            // ★ここを ID順（数値昇順）に変更
+            .sort((a, b) => {
+                return Number(a.node.id) - Number(b.node.id);
+            });
+
+            // --- リストの描画 ---
+            processedNodes.forEach(item => {
+                const n = item.node;
+                let itemText = n.name;
+                
+                if (group.type === 'melody') {
+                    itemText = item.isOutgoing ? `↗️ 引用: ${n.name}` : `↙️ 被引用: ${n.name}`;
+                } else if (group.type === 'context') {
+                    itemText = `🔗 ${n.name}`;
+                } else {
+                    // テーマノード選択時はここが実行され、おんぷ（🎵）とともに名前が表示される
+                    itemText = `${group.icon} ${n.name}`;
+                }
+
+                list.append("li")
+                    .attr("class", "node-item")
+                    .style("cursor", "pointer")
+                    .text(itemText)
+                    .on("click", () => focusNode(n.id));
+            });
+        }
     });
-
-
 }
 
 // --- メイン：グラフ更新ロジック ---
 function updateGraph() {
     // アクティブなカテゴリに基づくリンクのフィルタリング
-    const currentLinks = allLinks.filter(l => 
-        l.type === 'song-link' || activeCategories.has(typeof l.source === 'object' ? l.source.id : l.source)
-    );
+// 1. リンクのフィルタリング
+    const currentLinks = allLinks.filter(l => {
+        // 曲同士のリンク（melody や context）は常に表示する
+        if (l.type === 'melody' || l.type === 'context') {
+            return true;
+        }
 
-    // エッジ更新
+        // カテゴリ（テーマ）とのリンクは、チェックが入っているものだけ表示
+        const sId = l.source.id || l.source;
+        const tId = l.target.id || l.target;
+        return activeCategories.has(sId) || activeCategories.has(tId);
+    });
+
+     // エッジ更新
     linkElements = linkElements.data(currentLinks, d => (d.source.id||d.source) + "-" + (d.target.id||d.target))
         .join("line")
-        .attr("stroke", d => d.type === 'cat-link' ? (d.source.color || "#777") : "#555")
-        .attr("stroke-opacity", d => d.type === 'cat-link' ? 0.3 : 0.1)
-        .attr("stroke-width", d => Math.sqrt(d.value));
+        .attr("stroke", d => {
+            if (d.type === 'cat-link') return (d.source.color || "#777");
+            if (d.type === 'melody') return "#ffffff"; // 引用（メロディ）は「白線」
+            if (d.type === 'context') return "#666666"; // 関連（文脈）はグレー
+            return "#555";
+        })
+        .attr("stroke-dasharray", d => {
+            if (d.type === 'context') return "10,3"; // 関連曲は「点線」にする（10px描いて3px空ける）
+            return "none"; // それ以外（引用やカテゴリ）は実線
+        })
+        .attr("stroke-opacity", d => {
+            if (d.type === 'melody') return 0.05;  // 引用はハッキリ
+            if (d.type === 'context') return 0.03; // 関連は薄いまま
+            return 0.2;
+        })
+        .attr("stroke-width", d => {
+            if (d.type === 'melody') return 2;  // 引用は少し太く
+            if (d.type === 'context') return 1.5; // 関連は細く
+            return Math.sqrt(d.value || 1);
+        });
 
     // ノード更新
     nodeElements = nodeElements.data(nodes, d => d.id)
@@ -1108,8 +2137,18 @@ function updateGraph() {
 
     simulation.nodes(nodes);
     simulation.force("link").links(currentLinks)
-        .distance(d => d.type === 'cat-link' ? (350 - d.value * 28) : 60)
-        .strength(d => d.type === 'cat-link' ? (d.value / 10) * 1.0 : 0.05);
+        .distance(d => {
+            if (d.type === 'cat-link') return (350 - d.value * 28);
+            if (d.type === 'melody') return 50;  // 引用は近くに配置
+            if (d.type === 'context') return 150; // 関連は遠くてもOKにする
+            return 60;
+        })
+        .strength(d => {
+            if (d.type === 'cat-link') return (d.value / 10) * 1.0;
+            if (d.type === 'melody') return 0.2;   // 引用はある程度引き寄せる
+            if (d.type === 'context') return 0.01/2; // ★関連はほとんど引力を働かせない
+            return 0.05;
+        });
     
     simulation.alpha(0.3).restart();
 }
